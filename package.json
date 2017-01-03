@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/danielhac/RESTful-Nodejs-MongoDB#readme",
   "dependencies": {
-    "express": "^4.11.2"
+    "express": "^4.11.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "install": "^0.8.4",
+    "npm": "^4.0.5"
   }
 }
