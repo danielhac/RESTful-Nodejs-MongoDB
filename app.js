@@ -1,4 +1,9 @@
-var express = require('express');
+var express = require('express'),
+    mongoose = require('mongoose');
+
+var db = mongoose.connect('mongodb://localhost/bookAPI');
+
+var book = require('./models/bookModel');
 
 var app = express();
 
