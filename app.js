@@ -14,7 +14,13 @@ var bookRouter = express.Router();
 bookRouter.route('/Books')
     .get(function(req, res) {
 
-        var query = req.query;
+        // Can replace empty object with req.query to allow search for all
+        var query = {};
+
+        // Only allow filtering of 'genre'
+        if (req.query.genre) {
+            query.genre = req.query.genre;
+        }
 
         Book.find(query, function(err, books) {
             if (err)
